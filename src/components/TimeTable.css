@@ -1,0 +1,12 @@
+/* Styles TimeTable */
+div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+div.Stage {
+    background-color: #282c34;
+    
+}
+
