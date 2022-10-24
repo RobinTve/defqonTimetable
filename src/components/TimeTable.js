@@ -6,20 +6,32 @@ import './TimeTable.css'
 
 export default function TimeTable() {
   return (
-    //Shows 5 DJsets
-    <div>
-       <div className="Stage">
-        <h1>Red</h1>
-        <DJset />
-        </div>
-        <div className="Stage">
-        <h1>Blue</h1>
-        <DJset />
-        </div>
-        <div className="Stage">
-        <h1>TimeTable</h1>
-        <DJset />
-        </div>
+    //Shows 5 DJsets in an unordered list
+    <div className="TimeTable">
+      <ul className="RedStage">
+        <li><h1>Red</h1></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+      </ul>
+      <ul className="BlueStage">
+        <li><h1>Blue</h1></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+      </ul>
+      <ul className="BlackStage">
+        <li><h1>Black</h1></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+        <li><DJset /></li>
+      </ul>
     </div>
   )
 }

@@ -5,8 +5,24 @@ div {
     display: flex;
 }
 
-div.Stage {
+h1.Stage {
     background-color: #282c34;
-    
+    width : 100%;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    width : 100%;
+}
+h1.artist {
+    width : 100%;
+}
+
+
+
+
 
