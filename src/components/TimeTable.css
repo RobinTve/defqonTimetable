@@ -8,6 +8,7 @@ div {
 h1.Stage {
     background-color: #282c34;
     width : 100%;
+    height: 100%;
 }
 
 ul {
@@ -18,11 +19,20 @@ ul {
     background-color: #f3f3f3;
     width : 100%;
 }
-h1.artist {
-    width : 100%;
+li{
+    list-style-position:inside;
+    border: 1px solid black;
 }
+ul.RedStage{
+    background-color: #f05454;
+}
+ul.BlueStage{
+    background-color: #0d5599;
+}
+ul.BlackStage{
+    background-color: #2b2222;
 
-
+}
 
 
 
