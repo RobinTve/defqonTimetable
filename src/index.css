@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+li
+{
+  /* Creates small boxes with lightblue background */ 
+  list-style-type: none;
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  /* Creates a border around the boxes */
+  border: 1px solid black;
+}

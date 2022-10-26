@@ -1,12 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
-import TimeTable from './components/TimeTable';
-import DJset from './components/DJset';
+import React, { useState } from 'react';
 
+  
+
+  
 function App() {
-  return (
-    <TimeTable />
-  );
-}
+  //Creates a list of artists
+  const [artists, setArtists] = useState([
+    {name: 'Cryex', time: '12:00 - 13:00'},
+    {name: 'Cryerrrx', time: '12:00 - 13:00'},
+    {name: 'Cryex', time: '12:00 - 13:00'},
+    
+  ])
+  //Creates a list of the user's schedule
+  const [schedule, setSchedule] = useState([
+  ])
 
+  function addToSchedule(index) {
+    //Adds the clicked artist index to the schedule list
+    setSchedule([...schedule, artists[index]])
+  }
+
+  return (
+    <div>
+      <h1>Artists</h1>
+      <ul>
+        {artists.map((artist, index) => (
+          <li key={index} onClick={() => addToSchedule(index)}>
+            <p className='artist'>{artist.name}</p>
+            <p className='time'>{artist.time}</p>
+          </li>
+        ))}
+      </ul>
+      <h1>Schedule</h1>
+      <ul>
+        {schedule.map((artist, index) => (
+          <li key={index}>
+            <p className='artist'>{artist.name}</p>
+            <p className='time'>{artist.time}</p>
+          </li>
+        ))}
+      </ul>
+      
+    </div>
+    
+
+  );
+
+  
+
+
+  
+  
+ 
+}
+  
 export default App;
