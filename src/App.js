@@ -18,6 +18,15 @@ function App() {
   function addToSchedule(index) {
     //Adds the clicked artist index to the schedule list
     setSchedule([...schedule, artists[index]])
+    //Removes the clicked artist from the artists list
+    setArtists(artists.filter((artist, i) => i !== index))
+  }
+
+  function removeFromSchedule(index) {
+    //Adds the clicked artist index to the artists list
+    setArtists([...artists, schedule[index]])
+    //Removes the clicked artist from the schedule list
+    setSchedule(schedule.filter((artist, i) => i !== index))
   }
 
   return (
@@ -34,7 +43,7 @@ function App() {
       <h1>Schedule</h1>
       <ul>
         {schedule.map((artist, index) => (
-          <li key={index}>
+          <li key={index} onClick={() => removeFromSchedule(index)}>
             <p className='artist'>{artist.name}</p>
             <p className='time'>{artist.time}</p>
           </li>
