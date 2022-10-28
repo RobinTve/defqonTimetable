@@ -63,18 +63,21 @@ function App() {
           <li key={index} onClick={() => addToScheduleRed(index)}>
             <p className='artist'>{redArtists.name}</p>
             <p className='time'>{redArtists.time}</p>
+
           </li>
         ))}
       </ul>
       <h1>Schedule</h1>
       <ul>
-        {schedule.map((artist, index) => (
-          <li key={index} onClick={() => removeFromSchedule(index)}>
-            <p className='artist'>{artist.name}</p>
-            <p className='time'>{artist.time}</p>
+        {schedule.map((schedule, index) => (
+          <li key={index} onClick={() => removeFromSchedule(index, schedule.stage)}>
+            <p className='artist'>{schedule.name}</p>
+            <p className='time'>{schedule.time}</p>
           </li>
         ))}
       </ul>
+  
+      
     </div>
   );
 
